@@ -24,7 +24,7 @@ class ProductsListAdapter(
             inputDesc.text = product.description
             inputValue.text = product.value.toPlainString()
         }
-    };
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val inflater = LayoutInflater.from(context)

@@ -2,13 +2,14 @@ package br.com.alura.listinha.ui.activity
 
 import android.app.Activity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import br.com.alura.listinha.R
 import br.com.alura.listinha.model.Product
 import br.com.alura.listinha.ui.recyclerView.adapter.ProductsListAdapter
 import java.math.BigDecimal
 
-class MainActivity : Activity() {
+class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
