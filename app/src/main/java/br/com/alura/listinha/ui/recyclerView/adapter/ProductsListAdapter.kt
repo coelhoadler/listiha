@@ -11,8 +11,10 @@ import br.com.alura.listinha.model.Product
 
 class ProductsListAdapter(
     private val context: Context,
-    private val products: List<Product>
+    products: List<Product>
 ) : RecyclerView.Adapter<ProductsListAdapter.ViewHolder>() {
+
+    private val products = products.toMutableList()
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         fun attach(product: Product) {
@@ -39,6 +41,12 @@ class ProductsListAdapter(
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val product = products[position]
         holder.attach(product)
+    }
+
+    fun update(products: List<Product>) {
+        this.products.clear()
+        this.products.addAll(products)
+        notifyDataSetChanged()
     }
 
 }
